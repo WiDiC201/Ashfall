@@ -21,6 +21,8 @@ No build step, no npm, no server required.
 That's it. If you would rather use a local server (optional, and closer to how
 real sites are tested):
 
+OR you can visit the github pages URL.
+
 ```
 cd ashfall
 python -m http.server 8000
