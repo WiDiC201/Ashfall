@@ -1,4 +1,4 @@
-# ASHFALL
+# ASHFALL Press ENTER a few times at the Startup
 
 *a lantern in the hollow*
 
