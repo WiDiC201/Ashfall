@@ -1,0 +1,61 @@
+/* ============================================================
+ASHFALL - style.css
+The page is only a frame. Everything else happens on canvas.
+============================================================ */
+
+* { box-sizing: border-box; }
+
+html, body {
+margin: 0;
+padding: 0;
+height: 100%;
+background: #04050b;
+overflow: hidden;
+font-family: "Segoe UI", system-ui, sans-serif;
+color: #cfd8ee;
+}
+
+/* a faint warm glow in the middle of the page, because the
+game is about the only light left in the world */
+body::before {
+content: "";
+position: fixed;
+inset: 0;
+background: radial-gradient(
+ellipse at 50% 45%,
+rgba(255, 150, 70, 0.06),
+rgba(4, 5, 11, 0) 60%
+);
+pointer-events: none;
+}
+
+#stage {
+position: absolute;
+inset: 0;
+display: grid;
+place-items: center;
+padding: 16px;
+}
+
+#game {
+width: 100%;
+max-width: 1280px;
+aspect-ratio: 16 / 9;
+height: auto;
+background: #04050b;
+border-radius: 4px;
+box-shadow:
+0 0 0 1px rgba(120, 140, 190, 0.12),
+0 24px 80px rgba(0, 0, 0, 0.8);
+outline: none;
+cursor: crosshair;
+}
+
+/* when the window is short, fit by height instead of width */
+@media (max-aspect-ratio: 16/9) {
+#game {
+width: auto;
+height: 100%;
+max-height: calc(100vh - 32px);
+}
+}
